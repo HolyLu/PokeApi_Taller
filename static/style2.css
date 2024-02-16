@@ -1,0 +1,39 @@
+/* escribir los estilos excluyendo las etiquetas style de apertura y cierre
+podes llamar a una etiqueta general y darle los estilos --> body, div, h1, img, etc --> */
+body {
+    background-color: #f0f0f0; /* color de fondo */
+    font-family: Arial, Helvetica, sans-serif; /* familia de fuentes */
+    margin: 0; /* margen exterior */ 
+    padding: 0; /* relleno */
+    width: 100%; /* ancho */
+  }
+  
+  .bloque {
+    background-color: #e5e5e5;;
+    max-width: 24rem; /*ancho maximo del bloque*/
+    margin-right: auto; /*margen derecho automatico para centrar*/
+    margin-left: auto; /*margen izquierdo automatico para centrar*/
+    padding: 2rem;
+  }
+  
+  .tarjeta {
+    background-color: #cccccc; /* color de fondo de la tarjeta */
+    border-radius: 20px; /* para esquinas redondeadas */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* sombra */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px;
+  }
+  
+  .titulo,
+  .subtitulo {
+    text-align: center;
+    font-weight: bold;
+    color: #333333;
+  }
+  
+  .imagen {
+    width: 200px;
+    height: auto;
+  }

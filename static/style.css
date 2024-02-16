@@ -1,0 +1,48 @@
+/* escribir los estilos excluyendo las etiquetas style de apertura y cierre
+podes llamar a una etiqueta general y darle los estilos --> body, div, h1, img, etc --> */
+
+body {
+    background-color: #f0f0f0; /* color de fondo */
+    font-family: Arial, Helvetica, sans-serif; /* familia de fuentes */
+    margin: 0; /* margen exterior */ 
+    padding: 0; /* relleno */
+    width: 100%; /* ancho */
+  }
+  
+  .container {
+    max-width: 24rem; /*ancho máximo del bloque*/
+    margin: 20px auto; /*centrar y agregar margen superior e inferior*/
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .tarjeta {
+    background-color: #f9f9f9; /* color de fondo de la tarjeta */
+    border-radius: 20px; /* para esquinas redondeadas */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* sombra */
+    padding: 20px;
+    width: 100%; /* asegurar que la tarjeta ocupe todo el ancho */
+    max-width: 400px; /* limitar el ancho máximo */
+  }
+  
+  .titulo,
+  .subtitulo {
+    text-align: center;
+    font-weight: bold;
+    color: #333333;
+  }
+  
+  .imagen-container {
+    border: 2px solid #ccc; /* borde de la imagen */
+    border-radius: 20px; /* para esquinas redondeadas */
+    overflow: hidden; /* ocultar contenido fuera del contenedor */
+    margin-bottom: 20px; /* espacio inferior */
+  }
+  
+  .imagen {
+    width: 100%; /* hacer que la imagen ocupe todo el ancho del contenedor */
+    max-height: 300px; /* altura máxima de la imagen */
+    object-fit: cover; /* asegurar que la imagen se ajuste dentro de su contenedor */
+  }

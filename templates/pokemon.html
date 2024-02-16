@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PokeAPI</title>
+    <link rel="stylesheet" href="static\style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Pokemon Information</h1>
+        <form action="/pokemon" method="post">
+            <input type="text" name="pokemon_name" placeholder="Enter Pokemon Name">
+            <button type="submit">Search</button>
+        </form>
+        {% if pokemon_data %}
+            <h2>Name: {{ pokemon_data.name }}</h2>
+            <img src="{{ pokemon_data.image_url }}" alt="{{ pokemon_data.name }} Image">
+            <p>Number of Abilities: {{ pokemon_data.habilities }}</p>
+            <p>Types: 
+                {% for type in pokemon_data.types %}
+                    {{ type.type.name }}{% if not loop.last %}, {% endif %}
+                {% endfor %}
+            </p>
+        {% endif %}
+    </div>
+</body>
+</html>
+
+    

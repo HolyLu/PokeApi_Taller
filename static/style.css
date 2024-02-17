@@ -1,48 +1,76 @@
-/* escribir los estilos excluyendo las etiquetas style de apertura y cierre
-podes llamar a una etiqueta general y darle los estilos --> body, div, h1, img, etc --> */
-
+/* Estilos para el cuerpo de la página */
 body {
-    background-color: #f0f0f0; /* color de fondo */
-    font-family: Arial, Helvetica, sans-serif; /* familia de fuentes */
-    margin: 0; /* margen exterior */ 
-    padding: 0; /* relleno */
-    width: 100%; /* ancho */
-  }
-  
-  .container {
-    max-width: 24rem; /*ancho máximo del bloque*/
-    margin: 20px auto; /*centrar y agregar margen superior e inferior*/
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .tarjeta {
-    background-color: #f9f9f9; /* color de fondo de la tarjeta */
-    border-radius: 20px; /* para esquinas redondeadas */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* sombra */
-    padding: 20px;
-    width: 100%; /* asegurar que la tarjeta ocupe todo el ancho */
-    max-width: 400px; /* limitar el ancho máximo */
-  }
-  
-  .titulo,
-  .subtitulo {
-    text-align: center;
-    font-weight: bold;
-    color: #333333;
-  }
-  
-  .imagen-container {
-    border: 2px solid #ccc; /* borde de la imagen */
-    border-radius: 20px; /* para esquinas redondeadas */
-    overflow: hidden; /* ocultar contenido fuera del contenedor */
-    margin-bottom: 20px; /* espacio inferior */
-  }
-  
-  .imagen {
-    width: 100%; /* hacer que la imagen ocupe todo el ancho del contenedor */
-    max-height: 300px; /* altura máxima de la imagen */
-    object-fit: cover; /* asegurar que la imagen se ajuste dentro de su contenedor */
-  }
+  font-family: Arial, sans-serif; /* Fuente predeterminada y de respaldo */
+  background-color: #f0f0f0; /* Color de fondo */
+  display: flex; /* Utiliza Flexbox para organizar los elementos hijos */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  height: 100vh; /* Usa el 100% de la altura de la ventana del navegador */
+}
+
+/* Estilos para el contenedor principal */
+.container {
+  background-color: #fff; /* Fondo blanco */
+  padding: 20px; /* Espacio interno */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  display: flex; /* Utiliza Flexbox para organizar los elementos hijos */
+  flex-direction: column; /* Organiza los elementos en columna */
+  align-items: center; /* Centra horizontalmente */
+  justify-content: center; /* Centra verticalmente */
+}
+
+/* Estilos para los títulos */
+h1 {
+  color: #333; /* Color de texto */
+}
+
+/* Estilos para los campos de entrada */
+.input-field {
+  width: 200px; /* Ancho del campo de entrada */
+  padding: 10px; /* Espacio interno */
+  border: 1px solid #ccc; /* Borde con color gris claro */
+  border-radius: 5px; /* Bordes redondeados */
+  margin-right: 10px; /* Margen derecho */
+}
+
+/* Estilos para el botón de búsqueda */
+.btn-search {
+  padding: 10px 20px; /* Espacio interno */
+  background-color: #007bff; /* Color de fondo */
+  color: #fff; /* Color de texto */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor al pasar por encima */
+}
+
+.btn-search:hover {
+  background-color: #0056b3; /* Color de fondo al pasar el cursor */
+}
+
+/* Estilos para la información del Pokémon */
+.pokemon-info {
+  margin-top: 20px; /* Margen superior */
+}
+
+/* Estilos para la imagen del Pokémon */
+.pokemon-image {
+  max-width: 200px; /* Ancho máximo */
+  height: auto; /* Altura automática para mantener la proporción */
+  margin-top: 10px; /* Margen superior */
+}
+
+/* Estilos para los párrafos dentro de la información del Pokémon */
+.pokemon-info p {
+  margin: 5px 0; /* Margen superior e inferior */
+}
+
+/* Anula la negrita para los títulos h3 dentro del contenedor */
+.container h3 {
+  font-weight: bold; /* Hace que todos los h3 dentro de .container estén en negrita */
+}
+
+/* Anula la negrita para el contenido dentro de strong dentro de h3 dentro de .container */
+.container h3 strong {
+  font-weight: normal; /* Anula la negrita para el contenido dentro de strong */
+}

@@ -8,22 +8,23 @@
 </head>
 <body>
     <div class="container">
-        <h1>Pokemon Information</h1>
-        <form action="/pokemon" method="post">
-            <input type="text" name="pokemon_name" placeholder="Enter Pokemon Name">
-            <button type="submit">Search</button>
+        <h1>Pokemon Information</h1> <!-- Encabezado principal -->
+        <form action="/pokemon" method="post"> <!-- Formulario para enviar la solicitud -->
+            <input type="text" name="pokemon_name" placeholder="Enter Pokemon Name"> <!-- Campo de entrada para el nombre del Pokémon -->
+            <button type="submit">Search</button> <!-- Botón de envío del formulario -->
         </form>
         {% if pokemon_data %}
-            <h2>Name: {{ pokemon_data.name }}</h2>
-            <img src="{{ pokemon_data.image_url }}" alt="{{ pokemon_data.name }} Image">
-            <p>Number of Abilities: {{ pokemon_data.habilities }}</p>
-            <p>Types: 
-                {% for type in pokemon_data.types %}
-                    {{ type.type.name }}{% if not loop.last %}, {% endif %}
+            <img src="{{ pokemon_data.image_url }}" alt="{{ pokemon_data.name }} Image"> <!-- Imagen del Pokémon -->
+            <h3>Name: {{ pokemon_data.name }}</h3> <!-- Nombre del Pokémon -->
+            <h3>Number of Abilities: {{ pokemon_data.habilities }}</h3> <!-- Número de habilidades del Pokémon -->
+            <h3>Types: <!-- Tipos del Pokémon -->
+                {% for type in pokemon_data.types %} <!-- Bucle para cada tipo del Pokémon -->
+                    {{ type.type.name }}{% if not loop.last %}, {% endif %} <!-- Nombre del tipo -->
                 {% endfor %}
-            </p>
+            </h3>
         {% endif %}
     </div>
+    
 </body>
 </html>
 

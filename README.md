@@ -26,3 +26,6 @@ A continuación, se describen los componentes principales del código:
 
 - Flask: Framework de Python para crear aplicaciones web.
 - Requests: Biblioteca para realizar solicitudes HTTP.
+- HTML.
+- CSS.
+- JINJA.
